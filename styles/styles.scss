@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+ul, ol {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+//res__styles__res__styles__res__styles__res__styles__res__styles__res__styles__res__styles__res__styles__res__styles__
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 640px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 34px;
+    max-width: 1100px;
+  }
+
+  @media screen and (min-width: 1220px) {
+    padding: 0 135px;
+    max-width: 1900px;
+  }
+}
+.header {
+  background-color: silver;
+  height: 60px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+}
+.header__nav {
+  &__list{
+
+  }
+  //display: flex;
+  //justify-content: center;
+}
+.header__nav-list {
+  background-color: rgba(222, 192, 203, 0.9);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -1000px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  @media screen and (min-width: 768px) {
+    position: static;
+    background-color: silver;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    top: initial;
+  }
+
+  @media screen and (min-width: 1220px) {
+    background-color: silver;
+  }
+}
+
+.header__nav-item {
+  margin-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    //display: block;
+  }
+
+  @media screen and (min-width: 1220px) {
+    //display: block;
+  }
+}
+
+.header__nav-link {
+  font-size: 42px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: static;
+    font-size: 16px;
+  }
+}
+
+.header__search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-section__svg {
+  margin-right: 20px;
+}
+
+.burger-menu {
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 5px;
+  }
+}
+
+.open {
+  top: 0;
+}
